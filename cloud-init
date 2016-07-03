@@ -4,13 +4,13 @@ output: {all: '| tee -a /var/log/cloud-init-output.log'}
 package_update: true
 package_upgrade: true
 package_reboot_if_required: true
+
 packages:
  - emacs24-nox
  - python3-pip
  - python-pip
  - npm
  - nodejs-legacy
-
 
 users:
  - name: jupyter
@@ -23,23 +23,19 @@ users:
    gecos: Adam
    sudo: ALL=(ALL) NOPASSWD:ALL
 
-
 chpasswd:
   list: |
     jupyter:RANDOM
     mike:RANDOM
     adam:RANDOM
-    andrea:RANDOM
 
 ssh_pwauth: False
 
 runcmd:
- - [ cd, "/home/jupyter"]
- - [ wget, "http://repo.continuum.io/archive/Anaconda2-4.1.0-Linux-x86_64.sh"]
- - [ cd, "/home/jupyter", "&&", bash, "Anaconda2-4.1.0-Linux-x86_64.sh", -b]
-  - [ "pip3", "install jupyterhub"]
-  - [ "pip3", "install notebook"]
-  - [ "pip3", "install ipykernel"]
-  - [ "pip", "install ipykernel"]
-  - [ "npm", "install -g configurable-http-proxy"]
-  - [ "/home/jupyter/anaconda2/bin/python2", -m , "ipykernel", "install"]
+ - [ cd, "/home/jupyter", "&&", "wget", "http://repo.continuum.io/archive/Anaconda2-4.1.0-Linux-x86_64.sh", "&&", "bash", "Anaconda2-4.1.0-Linux-x86_64.sh", -b]
+ - [ "pip3 install jupyterhub"]
+ - [ "pip3 install notebook"]
+ - [ "pip3 install ipykernel"]
+ - [ "pip install ipykernel"]
+ - [ "npm install -g configurable-http-proxy"]
+ - [ "/home/jupyter/anaconda2/bin/python2 -m ipykernel install"]
