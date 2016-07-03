@@ -11,6 +11,10 @@ packages:
  - npm
  - nodejs-legacy
  - git
+ - texlive-latex-base
+ - texlive-fonts-recommended
+ - cm-super
+ - texlive-latex-extra
 
 users:
  - name: jupyter
@@ -38,5 +42,8 @@ runcmd:
  - [ pip3, "install", "notebook"]
  - [ pip3, "install" ,"ipykernel"]
  - [ pip, "install", "ipykernel"]
+ - [ pip, "install", "ipywidgets"]
+ - [ pip3, "install", "ipywidgets"]
  - [ npm, "install", -g, "configurable-http-proxy"]
  - [ /home/jupyter/anaconda/bin/python2, -m, "ipykernel", "install"]
+ - grep -e "^[[:alpha:]]*:[[:alnum:]]*$" /var/log/cloud-init-output.log  > /home/jupyter/foo.out
