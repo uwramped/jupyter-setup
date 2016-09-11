@@ -23,83 +23,14 @@ users:
  - name: mike
    gecos: Mike
    sudo: ALL=(ALL) NOPASSWD:ALL
- - name: adam
-   gecos: Adam
-   sudo: ALL=(ALL) NOPASSWD:ALL
-  - name: andrea
-  - name: tonia
-  - name: mhurley
-  - name: crodger
-  - name: tharris
-  - name: bray
-  - name: mmcatee
-  - name: jmartin
-  - name: skramer
-  - name: jthomps
-  - name: mtlusto
-  - name: mstewar
-  - name: mhilema
-  - name: yhilema
-  - name: pkuberr
-  - name: cgraf
-  - name: mwesnit
-  - name: tfreder
-  - name: canders
-  - name: rperry
-  - name: gvlasto
-  - name: dgreen
-  - name: resh
-  - name: cfoley
-  - name: dcypher
-  - name: gstott
-  - name: klloyd
-  - name: jspauld
-  - name: clee
-  - name: wcurtis
-  - name: pkasza
-  - name: jjorgen
-  - name: vdavis
-  - name: cspears
+ - name: user1
+
 
 chpasswd:
   list: |
     jupyter:RANDOM
     mike:RANDOM
-    adam:RANDOM
-    andrea:RANDOM
-    tonia:RANDOM
-    mhurley:RANDOM
-    crodger:RANDOM
-    tharris:RANDOM
-    bray:RANDOM
-    mmcatee:RANDOM
-    jmartin:RANDOM
-    skramer:RANDOM
-    jthomps:RANDOM
-    mtlusto:RANDOM
-    mstewar:RANDOM
-    mhilema:RANDOM
-    yhilema:RANDOM
-    pkuberr:RANDOM
-    cgraf:RANDOM
-    mwesnit:RANDOM
-    tfreder:RANDOM
-    canders:RANDOM
-    rperry:RANDOM
-    gvlasto:RANDOM
-    dgreen:RANDOM
-    resh:RANDOM
-    cfoley:RANDOM
-    dcypher:RANDOM
-    gstott:RANDOM
-    klloyd:RANDOM
-    jspauld:RANDOM
-    clee:RANDOM
-    wcurtis:RANDOM
-    pkasza:RANDOM
-    jjorgen:RANDOM
-    vdavis:RANDOM
-    cspears:RANDOM
+    user1:RANDOM
 
 ssh_pwauth: False
 
