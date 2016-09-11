@@ -106,6 +106,7 @@ ssh_pwauth: False
 runcmd:
  - wget http://repo.continuum.io/archive/Anaconda2-4.1.0-Linux-x86_64.sh
  - wget https://raw.githubusercontent.com/uwramped/jupyter-setup/master/jupyterhub_config.py
+ - [ mv, "jupyterhub_config.py", "/root/jhc.py"]
  - [ bash, "Anaconda2-4.1.0-Linux-x86_64.sh", -b, -p,"/home/jupyter/anaconda"]
  - [ pip3, "install", "jupyterhub"]
  - [ pip3, "install", "notebook"]
