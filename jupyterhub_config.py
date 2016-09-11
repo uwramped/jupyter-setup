@@ -356,7 +356,7 @@ c.JupyterHub.admin_access = True
 # set of usernames of admin users
 # 
 # If unspecified, only the user that launches the server will be admin.
-c.Authenticator.admin_users = set('jupyter')
+c.Authenticator.admin_users = set("jupyter")
 
 # Dictionary mapping authenticator usernames to JupyterHub users.
 # 
